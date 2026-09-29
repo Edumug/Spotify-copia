@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagugafy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src=".img/logo" alt="logo" class="logo">
+        <input type="text" id="pesquisar" placeholder="Procure uma música">
+    </header>
+    <main>
+        <section class="biblioteca">
+            <button class="musica" id="ainda_perguntam_por_voce" data-src="musicas/kurebo.mp3">
+                <img src="img/kurebo.jpg" alt="kurebo">
+                <p class="titulo">Ainda Perguntam por Você - Kurebo</p>
+            </button>
+            <button class="musica" id="o_tempo_não_para" data-src="musicas/otemponaopara.mp3">
+                <img src="img/cazuza.jpg" alt="cazuza">
+                <p class="titulo">O Tempo Não Para - Cazuza</p>
+            </button>
+            <button class="musica" id="cheri_lady" data-src="musicas/cherilady.mp3">
+                <img src="img/modern.jpg" alt="modern">
+                <p class="titulo">Cheri Cheri Lady - Modern Talking</p>
+            </button>
+        </section>
+    </main>
+    <section class="tocando">
+        <h1 style="color: aliceblue;" id="teste"></h1>
+        <button id="play">▶</button>
+        <div class="progressoc" id="progressoc">
+            <div class="progresso" id="progresso"></div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
