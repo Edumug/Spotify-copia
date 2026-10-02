@@ -6,44 +6,49 @@
 
 header{
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
+    min-height: 70px;
     background-color: black;
     align-items: center;
-    
-    #pesquisar{
-        margin-left: 33%;
-        width: 500px;
-        height: 8px;
-        border-radius: 25px;
-        border: 2px;
-        background-color: rgb(48, 48, 48);
-        color: rgb(255, 255, 255);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        padding: 20px;
-    }
-    #admin{
-        margin-left: 20%;
-    }
     border-bottom: 2px solid #ff6600;
+}
+
+#pesquisar{
+    margin-left: 33%;
+    width: 500px;
+    height: 8px;
+    border-radius: 25px;
+    border: 2px;
+    background-color: rgb(48, 48, 48);
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+}
+
+#admin{
+    margin-left: 20%;
 }
 
 main{
     display: flex;
     flex: 1;
-    width: 100vw;
-    height:80vh;
+    width: 100%;
+    min-height: 80vh;
     background-color: rgb(15, 15, 15);
     color: #ff6600;
 }
+
 .logo{
     width: 70px;
     margin: 20px;
 }
+
 .biblioteca{
     border-right: 2px solid #ff6600;
     display: flex;
     width: 30vw;
+    min-width: 250px;
     height: 80vh;
     background-color: rgb(0, 0, 0);
     padding: 20px;
@@ -52,38 +57,41 @@ main{
 }
 
 .main{
-     .titulo{
-        margin-left: 50%;
-        margin-top: 35px;
-        margin-bottom: 70px;
-    } 
-    .musicas{
-        display: grid;  
-        grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
-    }
-    .musica{
-    margin-left: 30px;
-}
+    flex: 1;
 }
 
+.titulo{
+    margin-left: 50%;
+    margin-top: 35px;
+    margin-bottom: 70px;
+}
 
+.musicas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
 
 .musica{
+    margin-left: 30px;
     justify-content: flex-start;
     display: flex;
     gap: 15px;
     width: 30vw;
+    max-width: 100%;
     height: 80px;
     background: none;
     border: none;
-    img{
-        border-radius: 100%;
-        width: 80px;
-        height: auto;
-    }
     flex-direction: row;
     align-items: center;
+}
+
+.musica img{
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .musica:hover{
@@ -92,34 +100,146 @@ main{
 
 .nome{
     color: aliceblue;
-
 }
 
 .tocando{
-     display: flex;
-    width: 100vw;
+    display: flex;
+    width: 100%;
     height: 10vh;
+    min-height: 65px;
     background-color: rgb(139, 70, 13);
     align-items: center;
     justify-content: center;
-    pausar{
-        width: 10px;
-        height: 10px;
-    }
     gap: 7px;
 }
-.progressoc{
-  background: #444;
-  border-radius: 4px;
-  cursor: pointer;
-  height: 6px;
-  width: 25%;
-  position: relative;
+
+#pausar{
+    width: 10px;
+    height: 10px;
 }
+
+.progressoc{
+    background: #444;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 6px;
+    width: 25%;
+    position: relative;
+}
+
 .progresso{
-  background: #ff6600;
-  border-radius: 4px;
-  height: 100%;
-  width: 0%;
-  transition: width 0.1s linear;
+    background: #ff6600;
+    border-radius: 4px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+/* Celular */
+@media (max-width: 768px){
+    header{
+        height: auto;
+        min-height: 70px;
+        padding: 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo{
+        width: 50px;
+        margin: 5px;
+    }
+
+    #pesquisar{
+        margin-left: 0;
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        height: 40px;
+        padding: 10px 15px;
+    }
+
+    #admin{
+        margin-left: 0;
+    }
+
+    main{
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .biblioteca{
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 90px;
+        border-right: none;
+        border-bottom: 2px solid #ff6600;
+        padding: 15px;
+    }
+
+    .main{
+        width: 100%;
+        padding: 0 15px 30px;
+    }
+
+    .titulo{
+        margin: 25px 0 30px;
+        text-align: center;
+    }
+
+    .musicas{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .musica{
+        width: 100%;
+        margin-left: 0;
+        height: 70px;
+    }
+
+    .musica img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .tocando{
+        position: sticky;
+        bottom: 0;
+        height: 70px;
+        padding: 10px;
+    }
+
+    .progressoc{
+        width: 45%;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 400px){
+    .logo{
+        width: 42px;
+    }
+
+    #pesquisar{
+        font-size: 13px;
+    }
+
+    #admin{
+        font-size: 12px;
+    }
+
+    .nome{
+        font-size: 14px;
+    }
+
+    .musica img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .progressoc{
+        width: 40%;
+    }
 }
