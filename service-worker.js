@@ -1,10 +1,6 @@
 const CACHE_NAME = 'pwa-cache-v1';
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/script.js',
-  '/icons/icon-192.png'
+  '/'
 ];
 
 // Instala o Service Worker e guarda os arquivos no cache
