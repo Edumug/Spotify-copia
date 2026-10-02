@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Bagugafy</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+    <header>
+    <h1 style="color: white;">Painel de Músicas</h1>
+    </header>
+    <section class="main">
+        <form id="form-musica">
+            <input id="titulo" placeholder="Título" required>
+            <input id="artista" placeholder="Artista" required>
+            <input id="capa" placeholder="Arquivo da capa .jpg" required>
+            <input id="audio" placeholder="Arquivo do áudio .mp3" required>
+            <button type="submit" id="btn-salvar">+ Adicionar música</button>
+            <button type="button" id="btn-cancelar" hidden>Cancelar edição</button>
+        </form>
+        
+        <table>
+            <tbody id="tabela"></tbody>
+        </table>
+    </section>
+        
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+    align-items: center;
+    
+    #pesquisar{
+        margin-left: 33%;
+        width: 500px;
+        height: 8px;
+        border-radius: 25px;
+        border: 2px;
+        background-color: rgb(48, 48, 48);
+        color: rgb(255, 255, 255);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 20px;
+    }
+    #admin{
+        margin-left: 20%;
+    }
+    border-bottom: 2px solid #ff6600;
+}
+
+main{
+    display: flex;
+    flex: 1;
+    width: 100vw;
+    height:80vh;
+    background-color: rgb(15, 15, 15);
+    color: #ff6600;
+}
+.logo{
+    width: 70px;
+    margin: 20px;
+}
+.biblioteca{
+    border-right: 2px solid #ff6600;
+    display: flex;
+    width: 30vw;
+    height: 80vh;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main{
+     .titulo{
+        margin-left: 50%;
+        margin-top: 35px;
+        margin-bottom: 70px;
+    } 
+    .musicas{
+        display: grid;  
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+    .musica{
+    margin-left: 30px;
+}
+}
+
+
+
+.musica{
+    justify-content: flex-start;
+    display: flex;
+    gap: 15px;
+    width: 30vw;
+    height: 80px;
+    background: none;
+    border: none;
+    img{
+        border-radius: 100%;
+        width: 80px;
+        height: auto;
+    }
+    flex-direction: row;
+    align-items: center;
+}
+
+.musica:hover{
+    background-color: rgb(20, 20, 20);
+}
+
+.nome{
+    color: aliceblue;
+
+}
+
+.tocando{
+     display: flex;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(139, 70, 13);
+    align-items: center;
+    justify-content: center;
+    pausar{
+        width: 10px;
+        height: 10px;
+    }
+    gap: 7px;
+}
+.progressoc{
+  background: #444;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 6px;
+  width: 25%;
+  position: relative;
+}
+.progresso{
+  background: #ff6600;
+  border-radius: 4px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
