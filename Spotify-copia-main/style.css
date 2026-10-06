@@ -216,6 +216,16 @@ main{
 }
 
 @media (max-width: 400px){
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #121212; /* Substitua pela cor preta/escura exata que você usou */
+        min-height: 100vh;
+    }
+    .tocando{
+        margin-top: 100%;
+    }
     .logo{
         width: 42px;
     }
