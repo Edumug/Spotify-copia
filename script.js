@@ -67,7 +67,6 @@ musica.addEventListener('timeupdate', (e) => {
   musica.currentTime = (clickX / width) * duration;
   });
 
-const musicas = document.querySelectorAll('.musica')
 const biblioteca = document.querySelector(".biblioteca");
 
 function salvarBiblioteca() {
@@ -116,5 +115,3 @@ pesquisa.addEventListener("input", () => {
     musica.style.display = nome.includes(termo) ? '' : 'none';
   });
 });
-
-
