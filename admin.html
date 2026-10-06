@@ -1,32 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Admin - Bagugafy</title>
+
   <link rel="icon" href="img/logo.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="admin.css">
 </head>
+
 <body class="admin">
-    <header>
+
+  <header>
     <h1 style="color: white;">Painel de Músicas</h1>
-    <button id="inicio"><a href="index.html">Inicio</a></button>
-    </header>
-    <section class="main">
-        <form id="form-musica">
-            <input id="titulo" placeholder="Título" required>
-            <input id="artista" placeholder="Artista" required>
-            <input id="capa" placeholder="Arquivo da capa .jpg" required>
-            <input id="audio" placeholder="Arquivo do áudio .mp3" required>
-            <button type="submit" id="btn-salvar">+ Adicionar música</button>
-            <button type="button" id="btn-cancelar" hidden>Cancelar edição</button>
-        </form>
-        
-        <table>
-            <tbody id="tabela"></tbody>
-        </table>
-    </section>
-        
+
+    <button id="inicio">
+      <a href="index.html">Início</a>
+    </button>
+  </header>
+
+  <section class="main">
+
+    <form id="form-musica">
+
+      <input
+        type="text"
+        id="titulo"
+        placeholder="Título"
+        required
+      >
+
+      <input
+        type="text"
+        id="artista"
+        placeholder="Artista"
+        required
+      >
+
+      <label for="capa">
+        Capa da música
+      </label>
+
+      <input
+        type="file"
+        id="capa"
+        accept="image/*"
+      >
+
+      <label for="audio">
+        Arquivo da música
+      </label>
+
+      <input
+        type="file"
+        id="audio"
+        accept="audio/mpeg,audio/mp3,audio/*"
+      >
+
+      <button type="submit" id="btn-salvar">
+        + Adicionar música
+      </button>
+
+      <button
+        type="button"
+        id="btn-cancelar"
+        hidden
+      >
+        Cancelar edição
+      </button>
+
+      <p id="status-upload"></p>
+
+    </form>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Capa</th>
+          <th>Título</th>
+          <th>Artista</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody id="tabela"></tbody>
+
+    </table>
+
+  </section>
+
   <script type="module" src="admin.js"></script>
+
 </body>
+
 </html>
