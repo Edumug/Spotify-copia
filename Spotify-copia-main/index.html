@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagugafy</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo" class="logo">
+        <input type="text" id="pesquisar" placeholder="Procure uma música">
+        <button id="admin"><a href="admin.html">Admin</a></button>
+    </header>
+    <main>
+        <section class="biblioteca">
+            <h1> Sua Biblioteca:</h1>
+            </section>
+            <section class="main">
+                <h1 class="titulo">MÚSICAS</h1>
+                <section class="musicas" id="lista-musicas">
+                </section>
+        </section>
+    </main>
+    <section class="tocando">
+        <p style="color: rgb(255, 255, 255);" id="teste"></p>
+        <button id="play">▶</button>
+        <div class="progressoc" id="progressoc">
+            <div class="progresso" id="progresso"></div>
+        </div>
+    </section>
+    <script type="module" src="script.js"></script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registrado com sucesso!', reg))
+        .catch(err => console.log('Falha ao registrar o Service Worker:', err));
+    });
+  }
+</script>
+
+</body>
+</html>

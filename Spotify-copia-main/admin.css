@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+    align-items: center;
+    
+    border-bottom: 2px solid #ff6600;
+    #inicio{
+        margin-left: auto;
+        margin-right: 30px;
+    }
+}
+
+main{
+    display: flex;
+    flex: 1;
+    width: 100vw;
+    height:80vh;
+    background-color: rgb(15, 15, 15);
+    color: #ff6600;
+
+}
+.main{
+    display: flex;
+    background-color: black;
+    width: 100vw;
+    height: 90vh;
+    flex-direction: column;
+    color: #ff6600;
+}
+table{
+    margin-top: 100px;
+    border: 2px solid #ff6600;
+}
+
+
